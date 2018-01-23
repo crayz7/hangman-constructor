@@ -1,10 +1,10 @@
-var Word = require("./word.js");
+var Hangman = require("./hangman.js");
 
-var Letter = function(value) {
-	console.log(Word);
-	this.value = value;
+var Letter = function(userGuess) {
+	//console.log(Word);
+	this.userGuess = userGuess;
 	this.show = false;
-	if (this.value == ' '){
+	if (this.userGuess == ' '){
 		this.show = true;
 	}
 
@@ -12,7 +12,7 @@ var Letter = function(value) {
 
 Letter.prototype.printInfo = function() {
 	if (this.show = true) {
-		console.log(this.value);
+		console.log(this.userGuess);
 	} else {
 	console.log("_");
  }

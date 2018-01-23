@@ -40,18 +40,19 @@ function game() {
 			var userGuess = response.guess;
 			//console.log(response.guess);
 
-			if (Word.wordArray.indexOf(userGuess) > -1) {
-			while (Word.wordArray.indexOf(userGuess, startValue) !== -1) {
-  				newWord[Word.wordArray.indexOf(userGuess, startValue)] = userGuess;
-  				startValue = Word.wordArray.indexOf(userGuess, startValue) + 1;
+			Letter();
+			// if (Word.wordArray.indexOf(userGuess) > -1) {
+			// while (Word.wordArray.indexOf(userGuess, startValue) !== -1) {
+  	// 			newWord[Word.wordArray.indexOf(userGuess, startValue)] = userGuess;
+  	// 			startValue = Word.wordArray.indexOf(userGuess, startValue) + 1;
   				
-  	// 			console.log(arrayOfBlanks);
+  	// // 			console.log(arrayOfBlanks);
  			
-  				}
-  				console.log(newWord.join(" "));
+  	// 			}
+  	// 			console.log(newWord.join(" "));
   				//remove letter
 				//fill blanks
-			};
+			//};
 		})
 }
 		 	//console.log('your letter is in place ', word.indexOf(userGuess));
