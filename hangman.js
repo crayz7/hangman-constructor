@@ -1,3 +1,6 @@
+// Run node hangman.js
+// Only works up to displaying blanks and asking for a guess. Does nothing with the guess.
+// Recursion works
 // Initially installed npm prompt but don't know how to delete it
 var inquirer = require('inquirer');
 var Letter = require('./letters.js');
