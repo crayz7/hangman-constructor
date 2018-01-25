@@ -1,23 +1,17 @@
-var Hangman = require("./hangman.js");
-
-var Letter = function(userGuess) {
-	//console.log(Word);
-	this.userGuess = userGuess;
+var Letter = function() {
+	this.value = value;
 	this.show = false;
-	if (this.userGuess == ' '){
+	if (this.value == ' ') 
 		this.show = true;
-	}
-
-}
+  }
 
 Letter.prototype.printInfo = function() {
-	if (this.show = true) {
-		console.log(this.userGuess);
-	} else {
-	console.log("_");
- }
+	if (this.show) {
+		return this.value;
+	}
+	return "_ ";
 }
 
-Letter.prototype.printInfo();
-
 module.exports = Letter;
+
+//push and splice to replace correct letter guessed

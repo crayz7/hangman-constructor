@@ -27,6 +27,15 @@ function game() {
 	console.log("Word to guess:");
 	newWord.printInfo();
 
+	guessLetter();
+
+};
+
+var guessesLeft = 10;
+
+function guessLetter() {
+	if (guessesLeft != 0) {
+
 	inquirer
 	.prompt([
 		{
@@ -40,27 +49,14 @@ function game() {
 			var userGuess = response.guess;
 			//console.log(response.guess);
 
-			Letter();
-			// if (Word.wordArray.indexOf(userGuess) > -1) {
-			// while (Word.wordArray.indexOf(userGuess, startValue) !== -1) {
-  	// 			newWord[Word.wordArray.indexOf(userGuess, startValue)] = userGuess;
-  	// 			startValue = Word.wordArray.indexOf(userGuess, startValue) + 1;
-  				
-  	// // 			console.log(arrayOfBlanks);
- 			
-  	// 			}
-  	// 			console.log(newWord.join(" "));
-  				//remove letter
-				//fill blanks
-			//};
-		})
+			
+			
+			guessesLeft--;
+
+			guessLetter();
+		});
+	} else {
+		console.log("No more guesses left!");
+		return; //end game
+  }
 }
-		 	//console.log('your letter is in place ', word.indexOf(userGuess));
-// 			else {
-// 			  wrongLetters.push(userGuess);
-// 			  guesses--;
-// 			  document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(", ");
-// 			  document.getElementById("remaining").innerHTML = guesses
-// 		}
-// 		});
-// }
