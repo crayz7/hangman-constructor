@@ -1,5 +1,6 @@
 // Run node hangman.js
 // Only works up to displaying blanks and asking for a guess. Does nothing with the guess.
+// This homework was difficult to grasp for me. I understood the constructor examples in class but couldn't wrap my head around constructors for the hw.
 // Recursion works
 // Initially installed npm prompt but don't know how to delete it
 var inquirer = require('inquirer');
